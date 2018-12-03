@@ -1,0 +1,1 @@
+g++ main.cpp -o video `pkg-config --cflags --libs opencv`
