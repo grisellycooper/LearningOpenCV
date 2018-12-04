@@ -5,14 +5,15 @@
 using namespace cv;
 using namespace std;
 
-/* Detect circles using HoughCircles function */
+/* Detect circles using HoughCircles function from OpenCV */
   
 int main(int argc, char** argv)
 {
     for( int i = 1; i < 7; i++ )
     {
         //string filename = samples::findFile(names[i]);
-        string filename = "../data/Captura1" + to_string(i) + ".PNG";
+        //string filename = "../data/Captura1" + to_string(i) + ".PNG";
+        string filename = "../data/InnerCircles.png";
         Mat src = imread(filename, IMREAD_COLOR);
         if( src.empty() )
         {
@@ -26,7 +27,7 @@ int main(int argc, char** argv)
         vector<Vec3f> circles;
         HoughCircles(gray, circles, HOUGH_GRADIENT, 1,
                  gray.rows/16,  // change this value to detect circles with different distances to each other
-                 1, 150, 1, -1 // change the last two parameters
+                 1, 150, 1, 0 // change the last two parameters
             // (min_radius & max_radius) to detect larger circles
         );
         for( size_t i = 0; i < circles.size(); i++ )

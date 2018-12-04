@@ -1,0 +1,3 @@
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Video_Circles3/build/CMakeFiles/rebuild_cache.dir
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Video_Circles3/build/CMakeFiles/circledet_video.dir
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Video_Circles3/build/CMakeFiles/edit_cache.dir

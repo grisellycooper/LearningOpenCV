@@ -8,7 +8,7 @@ using namespace cv;
 /* Try to detect a circles grid in a video/image using findCirclesGrid function */
 int main(int argc, char** argv){
 
-    const char* filename = argc >=2 ? argv[1] : "../data/gridcircles.jpg";
+    const char* filename = argc >=2 ? argv[1] : "../data/InnerCircles.png";
     // Loads an image
     Mat src = imread( filename, IMREAD_COLOR );
     // Check if image is loaded fine
@@ -18,7 +18,7 @@ int main(int argc, char** argv){
         return -1;
     }
     std::cout<<"1"<<std::endl;
-    Size patternsize(16,16); //number of centers
+    Size patternsize(4,5); //number of centers
     Mat gray;
     cvtColor(src, gray, COLOR_BGR2GRAY);
     std::vector<Point2f> centers; //this will be filled by the detected centers

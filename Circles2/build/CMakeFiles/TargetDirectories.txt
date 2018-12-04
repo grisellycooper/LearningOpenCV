@@ -1,0 +1,3 @@
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Circles2/build/CMakeFiles/rebuild_cache.dir
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Circles2/build/CMakeFiles/rings_detection.dir
+/home/sol/Documents/MCS/II/Imagenes/Project1/LearningOpenCV/Circles2/build/CMakeFiles/edit_cache.dir
