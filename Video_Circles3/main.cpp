@@ -9,7 +9,7 @@ using namespace std;
 /* Try to detect circles in a video using HoughCircles function */
 int main(int argc, char** argv){
 
-    std::string filename = "../../../videos/PadronAnillos_02.avi";
+    std::string filename = "../../../videos/PadronAnillos_01.avi";
     VideoCapture capture(filename);
     Mat frame;
 
@@ -120,8 +120,8 @@ int main(int argc, char** argv){
                         if(distance < threshold){
                             minEllipseSelected.push_back(minEllipse[i]);            
                             minEllipseSelected.push_back(minEllipse[hierarchy[i][2]]);                            
-                            ellipse(img, minEllipse[i], Scalar(0,0,255), 2, 8 );            
-                            ellipse(img, minEllipse[hierarchy[i][2]], Scalar(0,0,255), 1, 8 );  
+                            //ellipse(frame, minEllipse[i], Scalar(0,0,255), 2, 8 );            
+                            //ellipse(frame, minEllipse[hierarchy[i][2]], Scalar(0,0,255), 1, 8 );  
                             centers.push_back(Point2f(child_c_x,child_c_y));          
                         }                                                        
                     }
@@ -130,9 +130,14 @@ int main(int argc, char** argv){
                 
                 break;        
         }
+        // The grid size must be "parametrizado"
         if(centers.size() == 30){
+            // Draw center points
+            for(int i = 0; i < centers.size();i++)
+                circle(frame, centers[i],1,Scalar(0,0,255),4,8);
+
             namedWindow("Video Display", WINDOW_NORMAL);
-            imshow("Video Display", img);
+            imshow("Video Display", frame);
             waitKey(20); // waits to display frame            
         }        
     }
